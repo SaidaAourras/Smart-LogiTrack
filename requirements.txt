@@ -1,0 +1,17 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+pyspark
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+python-dotenv
+pytest
+psycopg2-binary
+python-jose
+python-multipart
+pyjwt
+pwdlib[argon2]
+pydantic[email]
