@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-
+    environment:
+      POSTGRES_USER: silver_user
+      POSTGRES_PASSWORD: silver_pass123  # Notez bien ce mot de passe
+      POSTGRES_DB: silver_data
+      POSTGRES_HOST_AUTH_METHOD: md5  # Ajoutez cette ligne
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    command: 
+      - "postgres"
+      - "-c"
+      - "shared_buffers=512MB"
+      - "-c"
+      - "max_connections=200"
+
+volumes:
+  postgres_data:
