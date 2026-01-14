@@ -3,6 +3,7 @@ from app.db.database import engine
 from app.db.models.base import Base
 from app.api.v1.routes.auth import auth_router
 from app.api.v1.routes.predict import predict_router
+from app.api.v1.routes.anaytics import analytic_router
 
 
 
@@ -13,3 +14,4 @@ Base.metadata.create_all(engine)
 
 app.include_router(auth_router , prefix='/api/v1')
 app.include_router(predict_router , prefix='/api/v1')
+app.include_router(analytic_router , prefix='/api/v1')
