@@ -60,8 +60,8 @@ Les analytics utilisent des requêtes SQL natives (CTE) via SQLAlchemy pour gara
 ### 2. Lancement
 ```bash
 # Cloner le projet
-git clone <url-du-repo>
-cd <nom-du-repo>
+git clone https://github.com/SaidaAourras/Smart-LogiTrack.git
+cd Smart-LogiTrack
 
 # Lancer l'infrastructure
 docker-compose up -d
